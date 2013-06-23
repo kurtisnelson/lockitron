@@ -4,7 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/kurtisnelson/lockitron.png)](https://codeclimate.com/github/kurtisnelson/lockitron)
 [![Coverage Status](https://coveralls.io/repos/kurtisnelson/lockitron/badge.png?branch=master)](https://coveralls.io/r/kurtisnelson/lockitron)
 [![Dependency Status](https://gemnasium.com/kurtisnelson/lockitron.png)](https://gemnasium.com/kurtisnelson/lockitron)
-[Documentation](http://rubydoc.info/gems/lockitron-client/)
+[Documentation](http://rubydoc.info/gems/lockitron/)
 
 Communicates with Lockitron
 
@@ -14,12 +14,33 @@ Communicates with Lockitron
 
 If you don't have an OAuth2 token already for the user of your app
 
-  ```ruby
+  ``ruby
   auther = Lockitron::Auth.new(client_id: 'YOUR_OAUTH_CLIENT_ID', client_secret: 'YOUR_OAUTH_CLIENT_SECRET', redirect_uri: 'URI_FOR_CODE')
   auther.authorization_url #Send your user to this URL to authenticate your app
   auther.token_from_code 'code parameter on the redirect uri'
   auther.token # Store this, it is your token
-  ```
+  ``
+
+To use, you will want a User object
+
+  `user = Lockitron::User('user oauth token')`
+
+Get all the user's locks
+
+  `locks = user.locks`
+
+This returns an array of Lock objects, which have a name and uuid method to find the one you want.
+
+Then to actually do something
+
+  ``ruby
+  lock.as user do |l|
+    l.unlock
+  end
+  ``
+
+For more examples, check the request tests in spec/request or the documentation.
+
 ##Contributing to lockitron
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.

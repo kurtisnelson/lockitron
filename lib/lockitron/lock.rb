@@ -1,7 +1,8 @@
 module Lockitron
   class Lock
     attr_reader :name
-    
+    attr_reader :uuid
+
     # Initializes a lock from a Lockitron JSON representation
     # @param [Hash] JSON
     # @return [Lockitron::Lock]
