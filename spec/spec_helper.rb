@@ -17,6 +17,8 @@ CLIENT_SECRET = ENV['CLIENT_SECRET']
 REDIRECT_URI = 'http://lockitron.com'
 AUTH_CODE = ENV['AUTH_CODE']
 OAUTH_TOKEN = ENV['OAUTH_TOKEN']
+VIRTUAL_LOCK_NAME = 'Gem Test'
+VIRTUAL_LOCK_UUID = 'a397ef51-7b33-46dd-9a96-53eb1a7ea07f'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.

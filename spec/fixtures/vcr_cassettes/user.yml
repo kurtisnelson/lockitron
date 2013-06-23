@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.lockitron.com/v1/locks?access_token=<OAUTH_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 23 Jun 2013 21:33:19 GMT
+      Server:
+      - Apache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"fc85b665bd3fef203cf530086be83441"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 04720dd8e07b20712f97372a1a18ca15
+      X-Runtime:
+      - '0.048871'
+      X-Rack-Cache:
+      - miss
+      Status:
+      - '200'
+      Strict-Transport-Security:
+      - max-age=15768000
+      Content-Length:
+      - '1091'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '[{"lock":{"id":"62191ffe-160e-4227-8e94-7537b83a9ba0","status":null,"name":"Gem
+        Test 2","latitude":null,"longitude":null,"keys":[{"id":"b59e31f1-dd34-4044-9e3c-5bb150a0ab70","start":null,"expire":null,"lock_id":"62191ffe-160e-4227-8e94-7537b83a9ba0","role":"owner","valid":true,"visible":true,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","human_phone":"(407)
+        512-0689","first_name":"Kurt","last_name":"Nelson","full_name":"Kurt Nelson","best_name":"Kurt
+        Nelson","activated":true}}]}},{"lock":{"id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","status":null,"name":"Gem
+        Test","latitude":null,"longitude":null,"keys":[{"id":"cee75f80-c36d-41fc-9bb9-f250fafe2cbc","start":null,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"owner","valid":true,"visible":true,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","human_phone":"(407)
+        512-0689","first_name":"Kurt","last_name":"Nelson","full_name":"Kurt Nelson","best_name":"Kurt
+        Nelson","activated":true}}]}}]'
+    http_version: 
+  recorded_at: Sun, 23 Jun 2013 21:34:40 GMT
+recorded_with: VCR 2.5.0
