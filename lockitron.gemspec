@@ -27,9 +27,11 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'faraday', ">= 0.8.4"
   s.add_dependency 'hashie'
+  s.add_dependency 'oauth2'
   s.add_development_dependency 'rspec', ">= 2.8.0"
   s.add_development_dependency 'rdoc', ">= 3.12"
   s.add_development_dependency 'bundler', ">= 1.0.0"
+  s.add_development_dependency 'dotenv'
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'vcr'

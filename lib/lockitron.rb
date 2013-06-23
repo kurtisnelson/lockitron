@@ -1,5 +1,6 @@
 require "lockitron/version"
+require_relative 'lockitron/auth.rb'
 
 module Lockitron
-  # Your code goes here...
+  API_ENDPOINT = "https://api.lockitron.com/v1"
 end

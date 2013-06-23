@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.lockitron.com/v1/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=authorization_code&code=34c39703ee0215478642f01bfbdf0a824b872aa176e7310312e393a8c0639965&client_id=f0605493712611e3fd2e53b96b0b54836b11d1b05985cc1f908e7a149a7bf5c4&client_secret=<CLIENT_SECRET>&redirect_uri=http%3A%2F%2Flockitron.com
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 23 Jun 2013 21:13:21 GMT
+      Server:
+      - Apache
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"d4cfa257668174eb65b1e1d52ca1ec98"'
+      X-Request-Id:
+      - b972cf3e216ae12e8c470acdb45a5fa9
+      X-Runtime:
+      - '0.071684'
+      X-Rack-Cache:
+      - invalidate, pass
+      Status:
+      - '200'
+      Strict-Transport-Security:
+      - max-age=15768000
+      Content-Length:
+      - '126'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"5e98e65391bcc32ebd89d781a1f97219b6e8c789331c574dbc1c5a43bafa7a6f","token_type":"bearer","expires_in":7776000}'
+    http_version: 
+  recorded_at: Sun, 23 Jun 2013 21:14:41 GMT
+recorded_with: VCR 2.5.0
