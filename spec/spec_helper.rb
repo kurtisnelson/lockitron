@@ -12,10 +12,13 @@ Dotenv.load
 require 'lockitron'
 
 #Setup test constants
-CLIENT_ID = ENV['CLIENT_ID']
+CLIENT_ID = 'f0605493712611e3fd2e53b96b0b54836b11d1b05985cc1f908e7a149a7bf5c4'
+ENV['CLIENT_SECRET'] ||= 'yay_client_secret'
 CLIENT_SECRET = ENV['CLIENT_SECRET']
 REDIRECT_URI = 'http://lockitron.com'
+ENV['AUTH_CODE'] = 'yay_auth_code'
 AUTH_CODE = ENV['AUTH_CODE']
+ENV['OAUTH_TOKEN'] ||= 'yay_auth_token'
 OAUTH_TOKEN = ENV['OAUTH_TOKEN']
 VIRTUAL_LOCK_NAME = 'Gem Test'
 VIRTUAL_LOCK_UUID = 'a397ef51-7b33-46dd-9a96-53eb1a7ea07f'
