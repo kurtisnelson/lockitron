@@ -1,4 +1,4 @@
-#Resumator
+#Lockitron
 [![Build Status](https://secure.travis-ci.org/kurtisnelson/lockitron.png)](http://travis-ci.org/kurtisnelson/lockitron)
 [![Gem Version](https://badge.fury.io/rb/lockitron.png)](http://badge.fury.io/rb/lockitron)
 [![Code Climate](https://codeclimate.com/github/kurtisnelson/lockitron.png)](https://codeclimate.com/github/kurtisnelson/lockitron)
@@ -12,6 +12,14 @@ Communicates with Lockitron
 
   `gem install lockitron`
 
+If you don't have an OAuth2 token already for the user of your app
+
+  ```ruby
+  auther = Lockitron::Auth.new(client_id: 'YOUR_OAUTH_CLIENT_ID', client_secret: 'YOUR_OAUTH_CLIENT_SECRET', redirect_uri: 'URI_FOR_CODE')
+  auther.authorization_url #Send your user to this URL to authenticate your app
+  auther.token_from_code 'code parameter on the redirect uri'
+  auther.token # Store this, it is your token
+  ```
 ##Contributing to lockitron
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
