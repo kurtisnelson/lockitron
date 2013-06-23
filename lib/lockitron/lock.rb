@@ -77,7 +77,7 @@ module Lockitron
         params[:start] = Time.now.to_i
       end
       params[:expiration] = params[:expiration].to_i if params[:expiration]
-      @user.post "locks/#{@uuid}/invite", params
+      @user.post "locks/#{@uuid}/add", params
     end
 
     private

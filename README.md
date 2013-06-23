@@ -6,7 +6,7 @@
 [![Dependency Status](https://gemnasium.com/kurtisnelson/lockitron.png)](https://gemnasium.com/kurtisnelson/lockitron)
 [Documentation](http://rubydoc.info/gems/lockitron/)
 
-Communicates with Lockitron
+Communicates with the [Lockitron API](http://api.lockitron.com)
 
 ##Usage
 

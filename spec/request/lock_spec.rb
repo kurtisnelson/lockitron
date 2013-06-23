@@ -20,6 +20,16 @@ describe Lockitron::Lock do
           end
         end
       end
+
+      it "invites users" do
+        lock.as valid_user do |l|
+          VCR.use_cassette 'invite' do
+            l.invite email: 'someone@example.com'
+            #invite someone for an hour from now
+            l.invite email: 'someone2@example.com', start: Time.now + 3200
+          end
+        end
+      end
     end
   end
 end

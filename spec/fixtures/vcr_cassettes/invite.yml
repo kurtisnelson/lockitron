@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.lockitron.com/v1/locks/a397ef51-7b33-46dd-9a96-53eb1a7ea07f/add
+    body:
+      encoding: US-ASCII
+      string: email=someone%40example.com&role=guest&start=1372028005&access_token=<OAUTH_TOKEN>
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 23 Jun 2013 22:52:18 GMT
+      Server:
+      - Apache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"1b8915afe54cbed95ed2e53529d49aee"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 18e6903a65af48755c9e3711e1ee0e26
+      X-Runtime:
+      - '1.318250'
+      X-Rack-Cache:
+      - invalidate, pass
+      Status:
+      - '200'
+      Strict-Transport-Security:
+      - max-age=15768000
+      Content-Length:
+      - '383'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"id":"7f02c05a-b94d-4c5a-814e-3bb5a07603b9","start":null,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"guest","valid":true,"visible":true,"user":{"id":"41d0322d-b03d-4eef-935b-904e05831496","email":"someone@example.com","phone":null,"human_phone":null,"first_name":null,"last_name":null,"full_name":null,"best_name":"someone@example.com","activated":false}}'
+    http_version: 
+  recorded_at: Sun, 23 Jun 2013 22:53:27 GMT
+- request:
+    method: post
+    uri: https://api.lockitron.com/v1/locks/a397ef51-7b33-46dd-9a96-53eb1a7ea07f/add
+    body:
+      encoding: US-ASCII
+      string: email=someone2%40example.com&start=1372031207&role=guest&access_token=<OAUTH_TOKEN>
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 23 Jun 2013 22:52:19 GMT
+      Server:
+      - Apache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"95b36bd88e1fb7dcb089e1535bee7815"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4f18fb69a1be7b921bc49b97e5756bfb
+      X-Runtime:
+      - '1.410540'
+      X-Rack-Cache:
+      - invalidate, pass
+      Status:
+      - '200'
+      Strict-Transport-Security:
+      - max-age=15768000
+      Content-Length:
+      - '395'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"id":"402d031d-21be-4442-9bbb-2ce07ccf84b0","start":-18864896400.0,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"guest","valid":true,"visible":true,"user":{"id":"40d877eb-03f4-4d66-b631-80f3d54fd832","email":"someone2@example.com","phone":null,"human_phone":null,"first_name":null,"last_name":null,"full_name":null,"best_name":"someone2@example.com","activated":false}}'
+    http_version: 
+  recorded_at: Sun, 23 Jun 2013 22:53:29 GMT
+recorded_with: VCR 2.5.0
