@@ -26,7 +26,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'faraday', ">= 0.8.4"
-  s.add_dependency 'hashie'
   s.add_dependency 'oauth2'
   s.add_development_dependency 'rspec', ">= 2.8.0"
   s.add_development_dependency 'rdoc', ">= 3.12"
