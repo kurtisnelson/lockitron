@@ -14,12 +14,12 @@ Communicates with the [Lockitron API](http://api.lockitron.com)
 
 If you don't have an OAuth2 token already for the user of your app
 
-  ``ruby
+  ```ruby
   auther = Lockitron::Auth.new(client_id: 'YOUR_OAUTH_CLIENT_ID', client_secret: 'YOUR_OAUTH_CLIENT_SECRET', redirect_uri: 'URI_FOR_CODE')
   auther.authorization_url #Send your user to this URL to authenticate your app
   auther.token_from_code 'code parameter on the redirect uri'
   auther.token # Store this, it is your token
-  ``
+  ```
 
 To use, you will want a User object
 
