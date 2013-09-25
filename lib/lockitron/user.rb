@@ -1,6 +1,8 @@
 require 'json'
 require_relative 'lock'
 module Lockitron
+  class AuthorizationError < RuntimeError; end
+  class ApiError < RuntimeError; end
   class User
     def initialize token
       @token = token
