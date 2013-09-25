@@ -1,6 +1,8 @@
 require 'json'
 require_relative 'lock'
 module Lockitron
+  class AuthorizationError < RuntimeError; end
+  class ApiError < RuntimeError; end
   class User
     def initialize token
       @token = token
@@ -22,8 +24,8 @@ module Lockitron
 
     private
     def process resp
-      raise "Not authorized" if resp.status == 403
-      raise "Bad API Request: #{resp.status}" unless resp.status == 200
+      raise AuthorizationError if resp.status == 403
+      raise ApiError, "Bad API Request: #{resp.status}" unless resp.status == 200
       data = JSON.parse resp.body
     end
   end

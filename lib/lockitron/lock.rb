@@ -45,7 +45,11 @@ module Lockitron
     # @return [Hash] API response
     def lock
       require_user
-      @user.post "locks/#{@uuid}/lock"
+      begin
+        @user.post "locks/#{@uuid}/lock"
+      rescue ApiError
+        false
+      end
     end
 
     # Unlocks this lock
@@ -53,7 +57,11 @@ module Lockitron
     # @return [Hash] API response
     def unlock
       require_user
-      @user.post "locks/#{@uuid}/unlock"
+      begin
+        @user.post "locks/#{@uuid}/unlock"
+      rescue ApiError
+        false
+      end
     end
 
     # Invites a user to this lock.
