@@ -22,6 +22,7 @@ module Lockitron
       @uuid = params[:uuid]
       @name = params[:name]
       @user = params[:user]
+      refresh if @user #if we have credentials, go ahead and sync with the API
     end
 
     # Takes a block of actions to perform as user
