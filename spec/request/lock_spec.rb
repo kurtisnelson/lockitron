@@ -13,6 +13,15 @@ describe Lockitron::Lock do
         end
       end
 
+      it "refreshes" do
+        lock.as valid_user do |l|
+          VCR.use_cassette 'refresh' do
+            l.refresh
+          end
+          l.name.should eq VIRTUAL_LOCK_NAME
+        end
+      end
+
       it "locks" do
         lock.as valid_user do |l|
           VCR.use_cassette 'lock' do

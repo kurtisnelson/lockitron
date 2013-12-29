@@ -67,6 +67,18 @@ module Lockitron
       end
     end
 
+    # Syncs the lock's status
+    # @note Must be performed with user context
+    def refresh
+      require_user
+      lock = @user.get "locks/#{@uuid}"
+      @name = lock['lock']['name']
+      @status = lock['lock']['status']
+      @latitude = lock['lock']['latitude']
+      @longitude = lock['lock']['longitude']
+      @keys = lock['lock']['keys']
+    end
+
     # Invites a user to this lock.
     # @note Must be performed in user context
     #
