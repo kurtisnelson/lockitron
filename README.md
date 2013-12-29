@@ -23,7 +23,7 @@ If you don't have an OAuth2 token already for the user of your app
 
 To use, you will want a User object
 
-  `user = Lockitron::User('user oauth token')`
+  `user = Lockitron::User.new('user oauth token')`
 
 Get all the user's locks
 
