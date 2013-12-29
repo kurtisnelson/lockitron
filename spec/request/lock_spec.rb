@@ -1,7 +1,7 @@
 require_relative '../spec_helper'
 
 describe Lockitron::Lock do
-  let(:lock) { Lockitron::Lock.new(uuid: VIRTUAL_LOCK_UUID, name: VIRTUAL_LOCK_NAME)}
+  let(:lock) { Lockitron::Lock.new(uuid: VIRTUAL_LOCK_UUID)}
   context "valid user" do
     let(:valid_user) { Lockitron::User.new OAUTH_TOKEN }
     describe '#as' do

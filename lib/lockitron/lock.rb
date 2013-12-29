@@ -2,6 +2,7 @@ module Lockitron
   class Lock
     attr_reader :name
     attr_reader :uuid
+    attr_reader :latitude, :longitude, :keys, :status
 
     # Initializes a lock from a Lockitron JSON representation
     # @param [Hash] JSON
@@ -14,22 +15,24 @@ module Lockitron
 
     # A lock
     # @param [Hash] options
-    # @options params [String] UUID (Required)
-    # @options params [String] Name
+    # @option params [String] UUID (Required)
+    # @option params [String] Name
+    # @option params [Lockitron::User] User
     def initialize(params={})
       @uuid = params[:uuid]
       @name = params[:name]
+      @user = params[:user]
     end
 
     # Takes a block of actions to perform as user
     # @param user [Lockitron::User]
     def as user
-      @user = user
+      insert_key user
       yield self
-      @user = nil
+      remove_key
     end
 
-    # Sets up the user context 
+    # Sets up the user context
     # @param user [Lockitron::User]
     def insert_key user
       @user = user
@@ -68,12 +71,12 @@ module Lockitron
     # @note Must be performed in user context
     #
     # @param [Hash] Options
-    # @options params [String] :phone
-    # @options params [String] :email
-    # @options params [String] :role Defaults to guest
-    # @options params [String] :fullname
-    # @options params [Time] :start Optional key start time
-    # @options params [Time] :expiration Optional key stop time
+    # @option params [String] :phone
+    # @option params [String] :email
+    # @option params [String] :role Defaults to guest
+    # @option params [String] :fullname
+    # @option params [Time] :start Optional key start time
+    # @option params [Time] :expiration Optional key stop time
     # @return [Hash] API response
     def invite(params={})
       require_user

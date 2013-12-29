@@ -16,6 +16,7 @@ module Lockitron
       resp = Faraday.get "#{API_ENDPOINT}/#{action}", {access_token: @token}
       process resp
     end
+
     def post action, params = {}
       params.merge!({access_token: @token})
       resp = Faraday.post "#{API_ENDPOINT}/#{action}", params
@@ -26,7 +27,7 @@ module Lockitron
     def process resp
       raise AuthorizationError if resp.status == 403
       raise ApiError, "Bad API Request: #{resp.status}" unless resp.status == 200
-      data = JSON.parse resp.body
+      JSON.parse resp.body
     end
   end
 end
