@@ -51,9 +51,20 @@ module Lockitron
       require_user
       begin
         @user.post "locks/#{@uuid}/lock"
+        @status = "lock"
       rescue ApiError
         false
       end
+    end
+
+    # @return [boolean] door is locked
+    def locked?
+      return @status == "lock"
+    end
+
+    # @return [boolean] door is unlocked
+    def unlocked?
+      return @status == "unlock"
     end
 
     # Unlocks this lock
@@ -63,6 +74,7 @@ module Lockitron
       require_user
       begin
         @user.post "locks/#{@uuid}/unlock"
+        @status = "unlock"
       rescue ApiError
         false
       end
