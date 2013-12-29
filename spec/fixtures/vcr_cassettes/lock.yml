@@ -8,7 +8,7 @@ http_interactions:
       string: access_token=<OAUTH_TOKEN>
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.8.8
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -20,36 +20,41 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Sun, 23 Jun 2013 22:06:12 GMT
-      Server:
-      - Apache
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - '"4835698658def1e57a3c33f917c6aa95"'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 8eeae9a228ebdcc428e46a9e111b3052
-      X-Runtime:
-      - '0.321305'
-      X-Rack-Cache:
-      - invalidate, pass
-      Status:
-      - '200'
-      Strict-Transport-Security:
-      - max-age=15768000
-      Content-Length:
-      - '545'
       Content-Type:
       - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - sessitron=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTVhYzdmMzU4NTQ1ZTg2YTY1NTk5MGM3OTM1ZTFhMzQ5BjsAVA%3D%3D--abb92905ec4b80c26418d1fef76477fc2c567fd6;
+        domain=.lockitron.com; path=/; secure; HttpOnly
+      X-Request-Id:
+      - b3bc2308b1a2805b64db186dcc14dd7c
+      X-Runtime:
+      - '0.066245'
+      Date:
+      - Sun, 29 Dec 2013 19:30:14 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.25
+      Server:
+      - nginx + Phusion Passenger 4.0.25
+      Strict-Transport-Security:
+      - max-age=15768000
     body:
       encoding: UTF-8
-      string: '{"activity":{"id":"dcf06438-e36f-4765-834c-d35d882ffd11","lock_name":"Gem
-        Test","lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","key_id":"cee75f80-c36d-41fc-9bb9-f250fafe2cbc","outcome":false,"human_outcome":"notice","type":4,"human_type":"lock-updated-locked","performed_at":1372025173.13896,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","human_phone":"(407)
+      string: '{"activity":{"id":"7e56603d-5759-477b-a251-294891cd7c17","lock_name":"Gem
+        Test","lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","key_id":"cee75f80-c36d-41fc-9bb9-f250fafe2cbc","outcome":false,"human_outcome":"notice","type":4,"human_type":"lock-updated-locked","performed_at":1388345414.55979,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","human_phone":"(407)
         512-0689","first_name":"Kurt","last_name":"Nelson","full_name":"Kurt Nelson","best_name":"Kurt
         Nelson","activated":true}}}'
     http_version: 
-  recorded_at: Sun, 23 Jun 2013 22:07:21 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Sun, 29 Dec 2013 19:31:38 GMT
+recorded_with: VCR 2.8.0
