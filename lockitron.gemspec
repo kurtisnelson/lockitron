@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version = Lockitron::VERSION
 
   s.authors = ["Kurt Nelson"]
-  s.date = "2013-06-22"
+  s.date = "2013-12-29"
   s.description = "Communicate with a Lockitron"
   s.email = "kurtisnelson@gmail.com"
   s.extra_rdoc_files = [
