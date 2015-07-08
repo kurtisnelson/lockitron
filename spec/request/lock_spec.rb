@@ -18,14 +18,14 @@ describe Lockitron::Lock do
           VCR.use_cassette 'refresh' do
             l.refresh
           end
-          l.name.should eq VIRTUAL_LOCK_NAME
+          expect(l.name).to eq VIRTUAL_LOCK_NAME
         end
       end
 
       it "refreshes automatically if possible" do
         VCR.use_cassette 'refresh' do
           lock = Lockitron::Lock.new(uuid: VIRTUAL_LOCK_UUID, user: valid_user)
-          lock.name.should eq VIRTUAL_LOCK_NAME
+          expect(lock.name).to eq VIRTUAL_LOCK_NAME
         end
       end
 

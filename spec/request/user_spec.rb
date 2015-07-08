@@ -5,8 +5,8 @@ describe Lockitron::User do
   it "lists all the locks" do
     VCR.use_cassette 'user' do
       locks = user.locks
-      locks.count.should be > 0
-      locks.first.should be_instance_of Lockitron::Lock
+      expect(locks.count).to be > 0
+      expect(locks.first).to be_instance_of Lockitron::Lock
     end
   end
 end
