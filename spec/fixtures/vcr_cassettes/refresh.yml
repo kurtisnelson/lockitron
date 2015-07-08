@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.lockitron.com/v1/locks/a397ef51-7b33-46dd-9a96-53eb1a7ea07f?access_token=<OAUTH_TOKEN>
+    uri: https://api.lockitron.com/v2/locks/a397ef51-7b33-46dd-9a96-53eb1a7ea07f?access_token=<OAUTH_TOKEN>
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.8
+      - Faraday v0.9.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
@@ -31,11 +31,11 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bb7042dca734164b49969cad07cc49c9
+      - ae65b9ef4ab0575a33e4b702f646ceaf
       X-Runtime:
-      - '0.038802'
+      - '0.089836'
       Date:
-      - Sun, 29 Dec 2013 19:30:09 GMT
+      - Wed, 08 Jul 2015 19:12:45 GMT
       X-Rack-Cache:
       - miss
       X-Powered-By:
@@ -44,12 +44,13 @@ http_interactions:
       - nginx + Phusion Passenger 4.0.25
       Strict-Transport-Security:
       - max-age=15768000
+      X-Frame-Options:
+      - SAMEORIGIN
     body:
-      encoding: UTF-8
-      string: '{"lock":{"id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","status":"unlock","name":"Gem
-        Test","latitude":null,"longitude":null,"keys":[{"id":"402d031d-21be-4442-9bbb-2ce07ccf84b0","start":-18864896400.0,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"guest","valid":true,"visible":true,"user":{"id":"40d877eb-03f4-4d66-b631-80f3d54fd832","email":"someone2@example.com","phone":null,"human_phone":null,"first_name":null,"last_name":null,"full_name":null,"best_name":"someone2@example.com","activated":false}},{"id":"7f02c05a-b94d-4c5a-814e-3bb5a07603b9","start":null,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"guest","valid":true,"visible":true,"user":{"id":"41d0322d-b03d-4eef-935b-904e05831496","email":"someone@example.com","phone":null,"human_phone":null,"first_name":null,"last_name":null,"full_name":null,"best_name":"someone@example.com","activated":false}},{"id":"cee75f80-c36d-41fc-9bb9-f250fafe2cbc","start":null,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"owner","valid":true,"visible":true,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","human_phone":"(407)
-        512-0689","first_name":"Kurt","last_name":"Nelson","full_name":"Kurt Nelson","best_name":"Kurt
-        Nelson","activated":true}}]}}'
+      encoding: ASCII-8BIT
+      string: '{"id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","name":"Gem Test","next_wake":null,"last_heard_from":null,"state":"lock","button_type":"slider","updated_at":"2015-04-30T17:50:21Z","handedness":"unsupported","avr_version":"unsupported","battery_voltage":"unsupported","sleep_period":null,"avr_update_progress":null,"ble_update_progress":null,"serial_number":"WRLYO-TYPTR-PTKAT-UXBMQCQ","hardware_id":null,"connected":null,"time_zone":"US/Pacific","keys":[{"id":"fc3ddc9f-d093-4436-beda-81906f71a6e5","start_date":null,"expiration_date":null,"role":"guest","valid":true,"visible":true,"sms_pin":null,"access_key":null,"user":{"id":"00e191a6-190e-46bf-a0f1-b8718312da2c","email":"example@lockitron.com","phone":null,"full_name":"Example
+        User","first_name":"Example","last_name":"User","activated":false,"changing_phone":false,"changing_email":false,"facebook":false,"avatar_url":"http://lockitron-avatars-dev.s3.amazonaws.com/avatars/system/icon_avatar_lockitron.png"}},{"id":"cee75f80-c36d-41fc-9bb9-f250fafe2cbc","start_date":null,"expiration_date":null,"role":"owner","valid":true,"visible":true,"sms_pin":"f244","access_key":null,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","full_name":"Kurt
+        Nelson","first_name":"Kurt","last_name":"Nelson","activated":true,"changing_phone":false,"changing_email":false,"facebook":true,"avatar_url":"http://lockitron-avatars-dev.s3.amazonaws.com/avatars/system/icon_avatar_lockitron.png"}}],"sms":false}'
     http_version: 
-  recorded_at: Sun, 29 Dec 2013 19:31:34 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Wed, 08 Jul 2015 19:12:45 GMT
+recorded_with: VCR 2.9.3

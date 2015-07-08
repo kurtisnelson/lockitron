@@ -2,23 +2,23 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.lockitron.com/v1/locks/a397ef51-7b33-46dd-9a96-53eb1a7ea07f/add
+    uri: https://api.lockitron.com/v2/locks/a397ef51-7b33-46dd-9a96-53eb1a7ea07f/keys
     body:
-      encoding: US-ASCII
-      string: email=someone%40example.com&role=guest&start=1388345498&access_token=<OAUTH_TOKEN>
+      encoding: UTF-8
+      string: access_token=<OAUTH_TOKEN>&email=someone%40example.com&start=1436383927
     headers:
       User-Agent:
-      - Faraday v0.8.8
+      - Faraday v0.9.1
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 201
+      message: Created
     headers:
       Content-Type:
       - application/json; charset=utf-8
@@ -27,20 +27,19 @@ http_interactions:
       Connection:
       - keep-alive
       Status:
-      - 200 OK
+      - 201 Created
       X-Ua-Compatible:
       - IE=Edge,chrome=1
+      Etag:
+      - '"1bcf6d6f70f1484fad0121550cd63e25"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - sessitron=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTc3YzEyNGNhN2M4ZmEzYjg5MGY2M2RlOWJkMzVmYmMyBjsAVA%3D%3D--d76f6ebfa8c397267801cd9e083ac7d6166eeec0;
-        domain=.lockitron.com; path=/; secure; HttpOnly
       X-Request-Id:
-      - 0c8d8a0477f3bf5b5faf35250d7a7e31
+      - b5a61b9957e4c12aa8f762c23fdc3a37
       X-Runtime:
-      - '0.495693'
+      - '0.072823'
       Date:
-      - Sun, 29 Dec 2013 19:30:41 GMT
+      - Wed, 08 Jul 2015 19:32:04 GMT
       X-Rack-Cache:
       - invalidate, pass
       X-Powered-By:
@@ -51,28 +50,28 @@ http_interactions:
       - max-age=15768000
     body:
       encoding: UTF-8
-      string: '{"id":"7f02c05a-b94d-4c5a-814e-3bb5a07603b9","start":null,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"guest","valid":true,"visible":true,"user":{"id":"41d0322d-b03d-4eef-935b-904e05831496","email":"someone@example.com","phone":null,"human_phone":null,"first_name":null,"last_name":null,"full_name":null,"best_name":"someone@example.com","activated":false}}'
+      string: '{"id":"7f02c05a-b94d-4c5a-814e-3bb5a07603b9","start_date":null,"expiration_date":null,"role":"guest","valid":true,"visible":true,"sms_pin":null,"access_key":null,"user":{"id":"41d0322d-b03d-4eef-935b-904e05831496","email":"someone@example.com","phone":null,"full_name":null,"first_name":null,"last_name":null,"activated":false,"changing_phone":false,"changing_email":false,"facebook":false,"avatar_url":"http://lockitron-avatars-dev.s3.amazonaws.com/avatars/system/icon_avatar_lockitron.png"}}'
     http_version: 
-  recorded_at: Sun, 29 Dec 2013 19:31:39 GMT
+  recorded_at: Wed, 08 Jul 2015 19:32:07 GMT
 - request:
     method: post
-    uri: https://api.lockitron.com/v1/locks/a397ef51-7b33-46dd-9a96-53eb1a7ea07f/add
+    uri: https://api.lockitron.com/v2/locks/a397ef51-7b33-46dd-9a96-53eb1a7ea07f/keys
     body:
-      encoding: US-ASCII
-      string: email=someone2%40example.com&start=1388348699&role=guest&access_token=<OAUTH_TOKEN>
+      encoding: UTF-8
+      string: access_token=<OAUTH_TOKEN>&email=someone2%40example.com&start=1436387127
     headers:
       User-Agent:
-      - Faraday v0.8.8
+      - Faraday v0.9.1
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 201
+      message: Created
     headers:
       Content-Type:
       - application/json; charset=utf-8
@@ -81,20 +80,19 @@ http_interactions:
       Connection:
       - keep-alive
       Status:
-      - 200 OK
+      - 201 Created
       X-Ua-Compatible:
       - IE=Edge,chrome=1
+      Etag:
+      - '"69dabdd81c8b7eb37102ce9b5b6b57c4"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - sessitron=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTI4NDJjYTlkNjMwMTFhNjgyYTIyYzg1MDQ1NmM1MjgxBjsAVA%3D%3D--8b33fe3268f893cebad820c2cc9c0896058013d0;
-        domain=.lockitron.com; path=/; secure; HttpOnly
       X-Request-Id:
-      - e386e983a043542c32869becdf20b685
+      - 5c46b0399b4e3e1d5beda94b3cbd51e4
       X-Runtime:
-      - '0.332159'
+      - '0.184460'
       Date:
-      - Sun, 29 Dec 2013 19:30:16 GMT
+      - Wed, 08 Jul 2015 19:32:04 GMT
       X-Rack-Cache:
       - invalidate, pass
       X-Powered-By:
@@ -105,7 +103,7 @@ http_interactions:
       - max-age=15768000
     body:
       encoding: UTF-8
-      string: '{"id":"402d031d-21be-4442-9bbb-2ce07ccf84b0","start":null,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"guest","valid":true,"visible":true,"user":{"id":"40d877eb-03f4-4d66-b631-80f3d54fd832","email":"someone2@example.com","phone":null,"human_phone":null,"first_name":null,"last_name":null,"full_name":null,"best_name":"someone2@example.com","activated":false}}'
+      string: '{"id":"402d031d-21be-4442-9bbb-2ce07ccf84b0","start_date":null,"expiration_date":null,"role":"guest","valid":true,"visible":true,"sms_pin":null,"access_key":null,"user":{"id":"40d877eb-03f4-4d66-b631-80f3d54fd832","email":"someone2@example.com","phone":null,"full_name":null,"first_name":null,"last_name":null,"activated":false,"changing_phone":false,"changing_email":false,"facebook":false,"avatar_url":"http://lockitron-avatars-dev.s3.amazonaws.com/avatars/system/icon_avatar_lockitron.png"}}'
     http_version: 
-  recorded_at: Sun, 29 Dec 2013 19:31:40 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Wed, 08 Jul 2015 19:32:08 GMT
+recorded_with: VCR 2.9.3

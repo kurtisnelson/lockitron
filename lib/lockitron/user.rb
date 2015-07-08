@@ -9,7 +9,7 @@ module Lockitron
     end
 
     def locks
-      get('locks').map {|lock| Lockitron::Lock.from_json lock['lock']} 
+      get('locks').map {|lock| Lockitron::Lock.from_json lock}
     end
 
     def get action
@@ -26,7 +26,7 @@ module Lockitron
     private
     def process resp
       raise AuthorizationError if resp.status == 403
-      raise ApiError, "Bad API Request: #{resp.status}" unless resp.status == 200
+      raise ApiError, "Bad API Request: #{resp.status}" unless resp.status >= 200 && resp.status < 300
       JSON.parse resp.body
     end
   end

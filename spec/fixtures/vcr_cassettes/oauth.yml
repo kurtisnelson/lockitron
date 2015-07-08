@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.lockitron.com/v1/oauth/token
+    uri: https://api.lockitron.com/v2/oauth/token
     body:
       encoding: UTF-8
       string: grant_type=authorization_code&code=34c39703ee0215478642f01bfbdf0a824b872aa176e7310312e393a8c0639965&client_id=f0605493712611e3fd2e53b96b0b54836b11d1b05985cc1f908e7a149a7bf5c4&client_secret=<CLIENT_SECRET>&redirect_uri=http%3A%2F%2Flockitron.com

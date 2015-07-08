@@ -85,11 +85,11 @@ module Lockitron
     def refresh
       require_user
       lock = @user.get "locks/#{@uuid}"
-      @name = lock['lock']['name']
-      @status = lock['lock']['status']
-      @latitude = lock['lock']['latitude']
-      @longitude = lock['lock']['longitude']
-      @keys = lock['lock']['keys']
+      @name = lock['name']
+      @status = lock['status']
+      @latitude = lock['latitude']
+      @longitude = lock['longitude']
+      @keys = lock['keys']
     end
 
     # Invites a user to this lock.
@@ -105,7 +105,6 @@ module Lockitron
     # @return [Hash] API response
     def invite(params={})
       require_user
-      params[:role] ||= 'guest' 
       raise InvalidArgument, "Phone or email required" unless params[:email] or params[:phone]
       if params[:start]
         params[:start] = params[:start].to_i
@@ -113,7 +112,7 @@ module Lockitron
         params[:start] = Time.now.to_i
       end
       params[:expiration] = params[:expiration].to_i if params[:expiration]
-      @user.post "locks/#{@uuid}/add", params
+      @user.post "locks/#{@uuid}/keys", params
     end
 
     private

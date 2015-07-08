@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.lockitron.com/v1/locks?access_token=<OAUTH_TOKEN>
+    uri: https://api.lockitron.com/v2/locks?access_token=<OAUTH_TOKEN>
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.8
+      - Faraday v0.9.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
@@ -31,11 +31,11 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6b6562e6f86146e91983fe3fab230a10
+      - 8d572c963529403cf5c5ceb88d17aaa4
       X-Runtime:
-      - '0.187618'
+      - '0.581930'
       Date:
-      - Sun, 29 Dec 2013 19:30:16 GMT
+      - Wed, 08 Jul 2015 19:12:46 GMT
       X-Rack-Cache:
       - miss
       X-Powered-By:
@@ -44,24 +44,16 @@ http_interactions:
       - nginx + Phusion Passenger 4.0.25
       Strict-Transport-Security:
       - max-age=15768000
+      X-Frame-Options:
+      - SAMEORIGIN
     body:
-      encoding: UTF-8
-      string: '[{"lock":{"id":"62191ffe-160e-4227-8e94-7537b83a9ba0","status":"lock","name":"Glass
-        Fun","latitude":null,"longitude":null,"keys":[{"id":"b59e31f1-dd34-4044-9e3c-5bb150a0ab70","start":null,"expire":null,"lock_id":"62191ffe-160e-4227-8e94-7537b83a9ba0","role":"owner","valid":true,"visible":true,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","human_phone":"(407)
-        512-0689","first_name":"Kurt","last_name":"Nelson","full_name":"Kurt Nelson","best_name":"Kurt
-        Nelson","activated":true}}]}},{"lock":{"id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","status":"lock","name":"Gem
-        Test","latitude":null,"longitude":null,"keys":[{"id":"402d031d-21be-4442-9bbb-2ce07ccf84b0","start":null,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"guest","valid":true,"visible":true,"user":{"id":"40d877eb-03f4-4d66-b631-80f3d54fd832","email":"someone2@example.com","phone":null,"human_phone":null,"first_name":null,"last_name":null,"full_name":null,"best_name":"someone2@example.com","activated":false}},{"id":"7f02c05a-b94d-4c5a-814e-3bb5a07603b9","start":null,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"guest","valid":true,"visible":true,"user":{"id":"41d0322d-b03d-4eef-935b-904e05831496","email":"someone@example.com","phone":null,"human_phone":null,"first_name":null,"last_name":null,"full_name":null,"best_name":"someone@example.com","activated":false}},{"id":"cee75f80-c36d-41fc-9bb9-f250fafe2cbc","start":null,"expire":null,"lock_id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","role":"owner","valid":true,"visible":true,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","human_phone":"(407)
-        512-0689","first_name":"Kurt","last_name":"Nelson","full_name":"Kurt Nelson","best_name":"Kurt
-        Nelson","activated":true}}]}},{"lock":{"id":"0433dabf-dd78-4599-a9cb-5cb8258f5df0","status":"unlock","name":"611
-        @ Windsor","latitude":null,"longitude":null,"keys":[{"id":"b1d68c1f-8815-4ec0-9357-fdcb98425f4b","start":null,"expire":1388552160.0,"lock_id":"0433dabf-dd78-4599-a9cb-5cb8258f5df0","role":"guest","valid":true,"visible":true,"user":{"id":"9a14a65b-28e2-4b64-9c84-26af2fc06c39","email":"michael.tomczak.cs@gmail.com","phone":"+18656608899","human_phone":"(865)
-        660-8899","first_name":"Michael","last_name":"Tomczak","full_name":"Michael
-        Tomczak","best_name":"Michael Tomczak","activated":false}},{"id":"1c4980dc-88d9-4c48-b697-9d639e3b9a74","start":null,"expire":null,"lock_id":"0433dabf-dd78-4599-a9cb-5cb8258f5df0","role":"admin","valid":true,"visible":true,"user":{"id":"32c1f943-4622-46ef-ae8d-8689255d0702","email":"andrewskriss@gmail.com","phone":"6783159307","human_phone":"(678)
-        315-9307","first_name":"Andrew","last_name":"Kriss","full_name":"Andrew Kriss","best_name":"Andrew
-        Kriss","activated":true}},{"id":"4fc2b433-57c3-479a-9707-7d35694212fc","start":null,"expire":null,"lock_id":"0433dabf-dd78-4599-a9cb-5cb8258f5df0","role":"admin","valid":true,"visible":true,"user":{"id":"3dc981f0-35f6-43f7-a48d-6d202448f53f","email":"aaron.hoodin@gmail.com","phone":"6785918040","human_phone":"(678)
-        591-8040","first_name":"Aaron","last_name":"Hoodin","full_name":"Aaron Hoodin","best_name":"Aaron
-        Hoodin","activated":true}},{"id":"d937d400-183d-4de9-8fe9-1864cc3ca3cc","start":null,"expire":null,"lock_id":"0433dabf-dd78-4599-a9cb-5cb8258f5df0","role":"owner","valid":true,"visible":true,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","human_phone":"(407)
-        512-0689","first_name":"Kurt","last_name":"Nelson","full_name":"Kurt Nelson","best_name":"Kurt
-        Nelson","activated":true}}]}}]'
+      encoding: ASCII-8BIT
+      string: '[{"id":"0433dabf-dd78-4599-a9cb-5cb8258f5df0","name":"611 @ Windsor","next_wake":"2015-05-12T06:55:14Z","last_heard_from":"2015-05-12T06:55:14Z","state":"lock","button_type":"slider","updated_at":"2015-05-09T15:16:02Z","handedness":"locked","avr_version":1418069060,"battery_voltage":4.4,"sleep_period":1800,"avr_update_progress":100,"ble_update_progress":100,"serial_number":null,"hardware_id":"20000c2a6904479f","connected":null,"time_zone":"America/New_York","keys":[{"id":"4fc2b433-57c3-479a-9707-7d35694212fc","start_date":null,"expiration_date":null,"role":"admin","valid":true,"visible":true,"sms_pin":null,"access_key":null,"user":{"id":"3dc981f0-35f6-43f7-a48d-6d202448f53f","email":"aaron.hoodin@gmail.com","phone":"6785918040","full_name":"Aaron
+        Hoodin","first_name":"Aaron","last_name":"Hoodin","activated":true,"changing_phone":false,"changing_email":false,"facebook":false,"avatar_url":"http://lockitron-avatars-dev.s3.amazonaws.com/avatars/system/icon_avatar_lockitron.png"}},{"id":"d937d400-183d-4de9-8fe9-1864cc3ca3cc","start_date":null,"expiration_date":null,"role":"owner","valid":true,"visible":true,"sms_pin":"da14","access_key":null,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","full_name":"Kurt
+        Nelson","first_name":"Kurt","last_name":"Nelson","activated":true,"changing_phone":false,"changing_email":false,"facebook":true,"avatar_url":"http://lockitron-avatars-dev.s3.amazonaws.com/avatars/system/icon_avatar_lockitron.png"}}],"sms":false},{"id":"a397ef51-7b33-46dd-9a96-53eb1a7ea07f","name":"Gem
+        Test","next_wake":null,"last_heard_from":null,"state":"lock","button_type":"slider","updated_at":"2015-04-30T17:50:21Z","handedness":"unsupported","avr_version":"unsupported","battery_voltage":"unsupported","sleep_period":null,"avr_update_progress":null,"ble_update_progress":null,"serial_number":"WRLYO-TYPTR-PTKAT-UXBMQCQ","hardware_id":null,"connected":null,"time_zone":"US/Pacific","keys":[{"id":"fc3ddc9f-d093-4436-beda-81906f71a6e5","start_date":null,"expiration_date":null,"role":"guest","valid":true,"visible":true,"sms_pin":null,"access_key":null,"user":{"id":"00e191a6-190e-46bf-a0f1-b8718312da2c","email":"example@lockitron.com","phone":null,"full_name":"Example
+        User","first_name":"Example","last_name":"User","activated":false,"changing_phone":false,"changing_email":false,"facebook":false,"avatar_url":"http://lockitron-avatars-dev.s3.amazonaws.com/avatars/system/icon_avatar_lockitron.png"}},{"id":"cee75f80-c36d-41fc-9bb9-f250fafe2cbc","start_date":null,"expiration_date":null,"role":"owner","valid":true,"visible":true,"sms_pin":"f244","access_key":null,"user":{"id":"6c121f58-0cc9-11e2-984d-4040401f6100","email":"kurtisnelson@gmail.com","phone":"+14075120689","full_name":"Kurt
+        Nelson","first_name":"Kurt","last_name":"Nelson","activated":true,"changing_phone":false,"changing_email":false,"facebook":true,"avatar_url":"http://lockitron-avatars-dev.s3.amazonaws.com/avatars/system/icon_avatar_lockitron.png"}}],"sms":false}]'
     http_version: 
-  recorded_at: Sun, 29 Dec 2013 19:31:40 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Wed, 08 Jul 2015 19:12:46 GMT
+recorded_with: VCR 2.9.3

@@ -3,5 +3,5 @@ require 'lockitron/auth'
 require 'lockitron/user'
 
 module Lockitron
-  API_ENDPOINT = "https://api.lockitron.com/v1"
+  API_ENDPOINT = "https://api.lockitron.com/v2"
 end

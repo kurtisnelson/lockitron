@@ -6,7 +6,7 @@ module Lockitron
       @client_secret = params[:client_secret]
       @redirect_uri = params[:redirect_uri]
       @oauth_client = OAuth2::Client.new(@client_id, @client_secret, site: API_ENDPOINT)
-      @oauth_client.options[:token_url] = "/v1/oauth/token"
+      @oauth_client.options[:token_url] = "/v2/oauth/token"
     end
 
     def token_from_code auth_code
