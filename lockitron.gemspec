@@ -25,15 +25,15 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
 
-  s.add_dependency 'faraday'
-  s.add_dependency 'oauth2'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'rdoc'
-  s.add_development_dependency 'bundler'
-  s.add_development_dependency 'dotenv'
-  s.add_development_dependency 'coveralls'
-  s.add_development_dependency 'pry'
-  s.add_development_dependency 'vcr'
-  s.add_development_dependency 'webmock'
+  s.add_dependency 'faraday', '~> 0.9'
+  s.add_dependency 'oauth2', '~> 1.0'
+  s.add_development_dependency 'rspec', '~> 0'
+  s.add_development_dependency 'rdoc', '~> 4.2'
+  s.add_development_dependency 'bundler', '~> 1.10'
+  s.add_development_dependency 'dotenv', '~> 0'
+  s.add_development_dependency 'coveralls', '~> 0'
+  s.add_development_dependency 'pry', '~> 0'
+  s.add_development_dependency 'vcr', '~> 0'
+  s.add_development_dependency 'webmock', '~> 0'
 end
 
