@@ -27,13 +27,14 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'faraday', '~> 0.9'
   s.add_dependency 'oauth2', '~> 1.0'
-  s.add_development_dependency 'rspec', '~> 0'
   s.add_development_dependency 'rdoc', '~> 4.2'
   s.add_development_dependency 'bundler', '~> 1.10'
-  s.add_development_dependency 'dotenv', '~> 0'
-  s.add_development_dependency 'coveralls', '~> 0'
-  s.add_development_dependency 'pry', '~> 0'
-  s.add_development_dependency 'vcr', '~> 0'
-  s.add_development_dependency 'webmock', '~> 0'
+  s.add_development_dependency 'dotenv'
+  s.add_development_dependency 'coveralls'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rspec', '~> 3.3'
+  s.add_development_dependency 'pry'
+  s.add_development_dependency 'vcr', '~> 2.9'
+  s.add_development_dependency 'webmock', '~> 1.21'
 end
 
