@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'faraday', '~> 0.9'
   s.add_dependency 'oauth2', '~> 1.0'
   s.add_development_dependency 'rdoc', '~> 4.2'
-  s.add_development_dependency 'bundler', '~> 1.10'
+  s.add_development_dependency 'bundler'
   s.add_development_dependency 'dotenv'
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'rake'
