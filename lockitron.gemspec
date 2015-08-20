@@ -8,7 +8,6 @@ Gem::Specification.new do |s|
   s.version = Lockitron::VERSION
 
   s.authors = ["Kurt Nelson"]
-  s.date = "2013-12-29"
   s.description = "Communicate with a Lockitron"
   s.email = "kurtisnelson@gmail.com"
   s.extra_rdoc_files = [
@@ -17,7 +16,6 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/kurtisnelson/lockitron"
   s.licenses = ["MIT"]
-  s.rubygems_version = "1.8.24"
   s.summary = "Access the Lockitron API"
 
   s.files         = `git ls-files`.split($/)
